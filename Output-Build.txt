@@ -1,0 +1,4 @@
+﻿1>------ Build started: Project: openglstuff, Configuration: Debug Win32 ------
+1>  main.cpp
+1>  openglstuff.vcxproj -> C:\Users\macab\Desktop\OpenGLCW\Debug\openglstuff.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
