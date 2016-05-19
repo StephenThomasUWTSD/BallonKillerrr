@@ -1,5 +1,5 @@
 #pragma once
-
+#include "glfw3.h"
 #include <stdlib.h>
 #include <glut.h>
 #include <iostream>
@@ -17,6 +17,7 @@
 #include "CameraConsoleOut.h"
 #include "Controller.h"
 #include "RenderClass.h"
+
 using namespace std;
 void rotateTiles(void);
 void bounce(void);
@@ -34,5 +35,6 @@ void init(void);
 void display(void);
 void RenderAssets();
 void pressKey(unsigned char key, int x, int y);
-
+void camera(void);
 void keyboardread(unsigned char key, int x, int y);
+void deltaTime();

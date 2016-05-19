@@ -19,8 +19,8 @@ void CameraConsoleOut::cubepositions(void)
 
 	for (int i = 0; i<10; i++)
 	{	
-		float positionz[10] = { rand() % 5 + 5 };
-		float positionx[10] = { rand() % 5 + 5 };
+		int positionz[10] = { rand() % 5 + 5 };
+		int positionx[10] = { rand() % 5 + 5 };
 	}
 }
 
@@ -32,6 +32,7 @@ void CameraConsoleOut::cube(void) {
 	for (int i = 0; i<10; i++)
 	{
 		glPushMatrix();
+
 		glTranslated(-positionx[i + 1] * 10, 0, -positionz[i + 1] * 10); //translate the cube
 		glutSolidCube(2); //draw the cube
 		glPopMatrix();

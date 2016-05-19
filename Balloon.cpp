@@ -21,7 +21,6 @@ bool Balloon::isBoundSphereIntersect(Ray v) {
 	if (v.LinePointDistanceSqd(BVposition) > (BoundSphereRadius*BoundSphereRadius))
 		return false; //no intersection detected
 	else true;//intersection detected
-
 }
 void Balloon::draw(void)
 {
@@ -31,17 +30,17 @@ void Balloon::draw(void)
 	//If you look at the front of a polygon its vertices are
 	//listed so that the polygon is drawn in counterclockwise manner.
 	//glPolygonMode(GL_FRONT_AND_BACK,GL_LINE);
-	//  glPolygonMode(GL_BACK,GL_FILL); //uses also GL_FRONT_AND_BACK; GL_FILL, GL_POINT, GL_LINE  
-	//  glPolygonMode(GL_FRONT,GL_FILL);// to spec. whether poly's. front and back are drawn filled
+	  glPolygonMode(GL_BACK,GL_FILL); //uses also GL_FRONT_AND_BACK; GL_FILL, GL_POINT, GL_LINE  
+	 glPolygonMode(GL_FRONT,GL_FILL);// to spec. whether poly's. front and back are drawn filled
 	// as lines or points
 
-	//  glCullFace(GL_BACK);//discards front or back facing polygons
-	//  glEnable(GL_CULL_FACE);  
+	glCullFace(GL_BACK);//discards front or back facing polygons
+	glEnable(GL_CULL_FACE);  
 	glPushMatrix();
 	glTranslatef(BVposition.x, BVposition.y, BVposition.z);
-	glutWireSphere(BoundSphereRadius, 18, 18);
+	glutWireSphere(BoundSphereRadius, 10, 10);
 
-	glPopMatrix();
+	/*glPopMatrix();
 	glPushMatrix();
 
 	glBegin(GL_QUADS);
@@ -99,6 +98,6 @@ void Balloon::draw(void)
 	glVertex3f(1.0, 0.0, 0.0);
 	glVertex3f(1.0, 0.0, -1.0);
 	glVertex3f(0.5, 1.25, -1.0);
-	glEnd();
+	glEnd();*/
 	glPopMatrix();
 }

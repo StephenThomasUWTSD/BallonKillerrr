@@ -11,8 +11,8 @@ public:
 	//angle of rotation
 	float xpos = 0, ypos = 0, zpos = 0,
 		xrot = 0, yrot = 0, angle = 0.0;
-	float positionz[10];
-	float positionx[10];
+	float positionz[11];
+	float positionx[11];
 
 	void AssetInit(void);
 	void cubepositions(void);
